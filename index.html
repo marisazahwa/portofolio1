@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Zahwa</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                135deg,
+                #ffffff,
+                #eeeeee
+            );
+        }
+
+        .hero-content {
+            padding: 50px 0;
+        }
+
+        .hero-small {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .profile-photo {
+            width: 330px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+        /* BUTTON */
+
+        .btn-dark-custom {
+            background: #222;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-dark-custom:hover {
+            background: #444;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #222;
+            color: #222;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            background: #222;
+            color: white;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* ABOUT */
+
+        .about-text {
+            line-height: 1.9;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* SKILLS */
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .skill-card i {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h4 {
+            font-size: 20px;
+        }
+
+        .skill-card p {
+            color: #777;
+        }
+
+        /* PROJECT */
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: #222;
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .project-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #222;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .education-card h4 {
+            font-weight: bold;
+        }
+
+        .education-card p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #222;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-box p {
+            color: #ddd;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+        }
+
+        .contact-item i {
+            margin-right: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #bbb;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                margin: auto;
+            }
+
+            .profile-photo {
+                width: 230px;
+                height: 230px;
+                margin-top: 35px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .btn-dark-custom,
+            .btn-outline-custom {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            ZAHWA
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        Tentang
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        Keahlian
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#project">
+                        Project
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">
+                        Pendidikan
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7 hero-content">
+
+                <div class="hero-small">
+                    Halo, saya
+                </div>
+
+                <h1>
+                    Zahwa
+                </h1>
+
+                <h2>
+                    Pelajar SMK & Web Developer Pemula
+                </h2>
+
+                <p>
+                    Saya adalah pelajar kelas XII SMK Mandiri yang
+                    memiliki ketertarikan pada teknologi, pemrograman,
+                    dan pengembangan website. Saya senang membuat
+                    berbagai project website untuk mengembangkan
+                    kemampuan saya di bidang teknologi.
+                </p>
+
+                <div class="mt-4">
+
+                    <a
+                        href="cv.html"
+                        class="btn-dark-custom"
+                    >
+                        <i class="bi bi-person-vcard"></i>
+                        Lihat CV
+                    </a>
+
+                    <!-- DOWNLOAD CV -->
+
+                    <a
+                        href="cv.html"
+                        download="CV-Zahwa.html"
+                        class="btn-outline-custom"
+                    >
+                        <i class="bi bi-download"></i>
+                        Unduh CV
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5 text-center">
+
+<img src="c:\Users\Acer\Documents\portofolio\foto zahwaa.jpeg" alt="" srcset="">
+            
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Tentang Saya
+            </h2>
+
+            <p>
+                Mengenal saya lebih dekat
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <p class="about-text">
+
+                    Saya adalah seorang pelajar SMK kelas XII yang
+                    memiliki minat dalam bidang teknologi dan
+                    pengembangan website. Saya mempelajari HTML,
+                    CSS, Bootstrap, PHP, dan MySQL serta menggunakan
+                    berbagai tools seperti VS Code, XAMPP, Laragon,
+                    dan GitHub.
+
+                    <br><br>
+
+                    Saya memiliki pengalaman membuat beberapa project
+                    website sederhana yang menggunakan database,
+                    sistem login, register, dashboard, dan CRUD.
+                    Saya terus berusaha mengembangkan kemampuan
+                    pemrograman melalui project dan pembelajaran
+                    secara mandiri.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills" style="background:#eeeeee;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Keahlian
+            </h2>
+
+            <p>
+                Kemampuan yang saya pelajari
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-code-slash"></i>
+
+                    <h4>
+                        HTML
+                    </h4>
+
+                    <p>
+                        Membuat struktur dan halaman website
+                        menggunakan HTML.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-palette"></i>
+
+                    <h4>
+                        CSS
+                    </h4>
+
+                    <p>
+                        Membuat tampilan website menjadi rapi,
+                        menarik, dan responsif.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-bootstrap"></i>
+
+                    <h4>
+                        Bootstrap
+                    </h4>
+
+                    <p>
+                        Membuat tampilan website responsif
+                        menggunakan Bootstrap.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-filetype-php"></i>
+
+                    <h4>
+                        PHP
+                    </h4>
+
+                    <p>
+                        Membuat sistem website sederhana
+                        menggunakan PHP.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-database"></i>
+
+                    <h4>
+                        MySQL
+                    </h4>
+
+                    <p>
+                        Membuat dan mengelola database
+                        menggunakan MySQL.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-github"></i>
+
+                    <h4>
+                        GitHub
+                    </h4>
+
+                    <p>
+                        Mengelola dan mempublikasikan project
+                        website ke GitHub.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT -->
+
+<section id="project">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Project
+            </h2>
+
+            <p>
+                Beberapa project yang pernah saya kerjakan
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+
+                    <h4>
+                        Website Sistem Informasi
+                    </h4>
+
+                    <p>
+                        Project website sederhana menggunakan PHP,
+                        MySQL, Bootstrap, XAMPP/Laragon dengan
+                        fitur login, register, dashboard, dan CRUD.
+                    </p>
+
+                    <span class="badge bg-dark">
+                        PHP
+                    </span>
+
+                    <span class="badge bg-dark">
+                        MySQL
+                    </span>
+
+                    <span class="badge bg-dark">
+                        Bootstrap
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-icon">
+                        <i class="bi bi-person-vcard"></i>
+                    </div>
+
+                    <h4>
+                        Portfolio & CV Website
+                    </h4>
+
+                    <p>
+                        Website portfolio pribadi yang berisi
+                        profil, keahlian, project, pendidikan,
+                        kontak, dan CV.
+                    </p>
+
+                    <span class="badge bg-dark">
+                        HTML
+                    </span>
+
+                    <span class="badge bg-dark">
+                        CSS
+                    </span>
+
+                    <span class="badge bg-dark">
+                        Bootstrap
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section
+    id="education"
+    style="background:#eeeeee;"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Pendidikan
+            </h2>
+
+            <p>
+                Riwayat pendidikan
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="education-card">
+
+                    <h4>
+                        SMK Mandiri
+                    </h4>
+
+                    <p>
+                        Kelas XII
+                    </p>
+
+                    <p>
+                        2024 - 2027
+                    </p>
+
+                    <p>
+                        Fokus pembelajaran pada Rekayasa
+                        Perangkat Lunak dan pengembangan
+                        aplikasi berbasis web.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>
+                Hubungi Saya
+            </h2>
+
+            <p>
+                Silakan hubungi saya melalui informasi berikut.
+            </p>
+
+
+            <div class="contact-item">
+
+                <i class="bi bi-envelope"></i>
+
+                zahwa231@gmail.com
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="bi bi-telephone"></i>
+
+                083876569867
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="bi bi-geo-alt"></i>
+
+                Medan, Sumatera Utara
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="bi bi-github"></i>
+
+                github.com/username
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Zahwa. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+></script>
+
+</body>
+</html>

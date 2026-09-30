@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CV Zahwa</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            color: #333;
+        }
+
+
+        /* CV */
+
+        .cv-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+        }
+
+
+        /* HEADER */
+
+        .header {
+            background: #1f2937;
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            flex-shrink: 0;
+        }
+
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+
+        .header h3 {
+            font-weight: normal;
+            color: #d1d5db;
+            margin-bottom: 15px;
+        }
+
+
+        .header p {
+            margin-bottom: 6px;
+            color: #e5e7eb;
+        }
+
+
+        /* CONTENT */
+
+        .content {
+            display: grid;
+            grid-template-columns: 32% 68%;
+        }
+
+
+        .left {
+            background: #f9fafb;
+            padding: 35px;
+        }
+
+
+        .right {
+            padding: 35px;
+        }
+
+
+        /* SECTION */
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1f2937;
+            border-bottom: 2px solid #1f2937;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+
+        /* CONTACT */
+
+        .contact-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+
+
+        .contact-item i {
+            font-size: 18px;
+            color: #1f2937;
+        }
+
+
+        /* SKILL */
+
+        .skill {
+            margin-bottom: 15px;
+        }
+
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+
+        .progress {
+            height: 8px;
+            background: #e5e7eb;
+        }
+
+
+        .progress-bar {
+            background: #1f2937;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+
+        /* TIMELINE */
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #1f2937;
+        }
+
+
+        .timeline-item h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+
+        .timeline-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+
+        /* BADGE */
+
+        .badge-custom {
+            display: inline-block;
+            background: #1f2937;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 20px;
+            margin: 4px 3px;
+            font-size: 13px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            .cv-container {
+                margin: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .profile-photo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .left,
+            .right {
+                padding: 25px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            body {
+                background: white;
+            }
+
+            .cv-container {
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .left,
+            .right {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="cv-container">
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+    
+        <img src="c:\Users\Acer\Documents\portofolio\foto zahwaaa.jpeg" alt="" srcset="">
+
+
+        <div>
+
+            <h1>
+                ZAHWA
+            </h1>
+
+
+            <h3>
+                Pelajar SMK / Web Developer Pemula
+            </h3>
+
+
+            <p>
+                <i class="bi bi-geo-alt"></i>
+                Medan, Indonesia
+            </p>
+
+
+            <p>
+                <i class="bi bi-envelope"></i>
+                zahwa231@gmail.com
+            </p>
+
+
+            <p>
+                <i class="bi bi-telephone"></i>
+                0850 7869 5674
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+
+        <!-- LEFT -->
+
+        <div class="left">
+
+
+            <!-- KONTAK -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Kontak
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <span>
+                        zahwa231@gmail.com
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="bi bi-telephone"></i>
+
+                    <span>
+                        083865478765
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <span>
+                        Medan, Sumatera Utara
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="bi bi-github"></i>
+
+                    <span>
+                        github.com/username
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- KEAHLIAN -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Keahlian
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        <span>HTML</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width:85%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        <span>CSS</span>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width:80%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        <span>Bootstrap</span>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width:80%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        <span>PHP</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width:70%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-name">
+                        <span>MySQL</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width:70%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOOLS -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Tools
+                </div>
+
+
+                <span class="badge-custom">
+                    VS Code
+                </span>
+
+
+                <span class="badge-custom">
+                    XAMPP
+                </span>
+
+
+                <span class="badge-custom">
+                    Laragon
+                </span>
+
+
+                <span class="badge-custom">
+                    GitHub
+                </span>
+
+
+                <span class="badge-custom">
+                    Bootstrap
+                </span>
+
+            </div>
+
+
+            <!-- DATA DIRI -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Data Diri
+                </div>
+
+
+                <p>
+                    <strong>Nama:</strong>
+                    Zahwa
+                </p>
+
+
+                <p>
+                    <strong>Status:</strong>
+                    Pelajar
+                </p>
+
+
+                <p>
+                    <strong>Sekolah:</strong>
+                    SMK Mandiri
+                </p>
+
+
+                <p>
+                    <strong>Kelas:</strong>
+                    XII
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="right">
+
+
+            <!-- TENTANG -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Tentang Saya
+                </div>
+
+
+                <p class="about">
+
+                    Saya adalah seorang pelajar SMK kelas XII yang
+                    memiliki ketertarikan pada bidang teknologi dan
+                    pengembangan website. Saya senang mempelajari
+                    HTML, CSS, Bootstrap, PHP, dan MySQL serta
+                    membuat berbagai project sederhana untuk
+                    meningkatkan kemampuan saya di bidang
+                    pemrograman.
+
+                </p>
+
+            </div>
+
+
+            <!-- PENDIDIKAN -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Pendidikan
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h4>
+                        SMK Mandiri
+                    </h4>
+
+
+                    <div class="date">
+                        2024 - Sekarang
+                    </div>
+
+
+                    <p>
+
+                        Siswa kelas XII dengan fokus pembelajaran
+                        pada Rekayasa Perangkat Lunak dan
+                        pengembangan aplikasi berbasis web.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Pengalaman / Project
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h4>
+                        Project Website CV
+                    </h4>
+
+
+                    <div class="date">
+                        2026
+                    </div>
+
+
+                    <p>
+
+                        Membuat website CV pribadi menggunakan
+                        HTML, CSS, Bootstrap, dan JavaScript serta
+                        mengunggah project ke GitHub.
+
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h4>
+                        Project Sistem Informasi
+                    </h4>
+
+
+                    <div class="date">
+                        2025 - 2026
+                    </div>
+
+
+                    <p>
+
+                        Membuat aplikasi web sederhana menggunakan
+                        PHP, MySQL, XAMPP/Laragon, dan Bootstrap
+                        dengan fitur login, register, dashboard,
+                        serta CRUD data.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PENCAPAIAN -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Pencapaian & Tanggung Jawab
+                </div>
+
+
+                <ul>
+
+                    <li class="mb-2">
+                        Menyelesaikan berbagai project website
+                        sederhana.
+                    </li>
+
+                    <li class="mb-2">
+                        Mempelajari dasar pengembangan website
+                        dan database.
+                    </li>
+
+                    <li class="mb-2">
+                        Bertanggung jawab dalam menyelesaikan
+                        tugas dan project sekolah.
+                    </li>
+
+                    <li class="mb-2">
+                        Mampu bekerja secara mandiri maupun
+                        dalam kelompok.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- MINAT -->
+
+            <div class="section">
+
+                <div class="section-title">
+                    Minat
+                </div>
+
+
+                <span class="badge-custom">
+                    Web Development
+                </span>
+
+
+                <span class="badge-custom">
+                    Programming
+                </span>
+
+
+                <span class="badge-custom">
+                    Technology
+                </span>
+
+
+                <span class="badge-custom">
+                    Design
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
